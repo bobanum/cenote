@@ -1,0 +1,12 @@
+{
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../RestInPeace"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "bobanum/restinpeace": "dev-main"
+    }
+}

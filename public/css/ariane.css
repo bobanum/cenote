@@ -1,0 +1,53 @@
+.ariane {
+	display: flex;
+	padding: 0em 1em;
+	border-bottom: 1px solid var(--color-text);
+	align-items: center;
+	img {
+		width: 1.5em;
+		height: 1.5em;
+		padding: .25em;
+		filter: url("#currentcolor");
+		cursor: pointer;
+	}
+	a {
+		color: var(--color-text);
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.view {
+		display: flex;
+		margin-left: auto;
+		[for='search'] {
+			transition: 250ms;
+			display: flex;
+			align-self: center;
+			align-items: center;
+			color: var(--color-text);
+			text-decoration: none;
+			overflow: hidden;
+			width: 1.5em;
+			&:focus-within {
+				width: 10em;
+			}
+		}
+		input {
+			border: none;
+			background-color: #fff;
+			color: var(--color-text);
+			border-radius: 1em;
+			outline: none;
+			padding: 0.25em 0.5em;
+			width: 100%;
+		}
+	}
+	input[type='radio'] {
+		display: none;
+
+		&:checked + * {
+			filter: url(#highlight) drop-shadow(1px 1px 1px #0008);
+		}
+	}
+}

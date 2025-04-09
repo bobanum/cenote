@@ -1,0 +1,9 @@
+{
+	"liveServer.settings.root": "/public",
+	"workbench.colorCustomizations": {
+		"titleBar.activeBackground": "#015678",
+		"titleBar.activeForeground": "#ffffff",
+		"titleBar.inactiveBackground": "#5a686d", 
+		"titleBar.inactiveForeground": "#ccc"
+	},
+}

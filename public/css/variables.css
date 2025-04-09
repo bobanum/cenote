@@ -1,0 +1,9 @@
+:root {
+	--h: 197;
+	--s: 98%;
+	--d: 24%;
+	--l: 76%;
+	--filter-hue: url("#currentcolor");
+	--color-text: hsl(var(--h), 41%, 54%);
+
+}
