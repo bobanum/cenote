@@ -1,9 +1,24 @@
 :root {
 	--h: 197;
-	--s: 98%;
-	--d: 24%;
+	--s: 78%;
+	--ll: 91%;
 	--l: 76%;
-	--filter-hue: url("#currentcolor");
-	--color-text: hsl(var(--h), 41%, 54%);
-
+	--ld: 61%;
+	--dl: 34%;
+	--d: 24%;
+	--dd: 14%;
+	--color-text: hsl(var(--h), var(--s), var(--d));
+	@media (prefers-color-scheme: dark) {
+		--ll: 14%;
+		--l: 24%;
+		--ld: 34%;
+		--dl: 61%;
+		--d: 76%;
+		--dd: 86%;
+	}
+}
+@font-face {
+	font-family: icons;
+	src: url("../img/iconfont.ttf") format("truetype");
+	font-style: normal;
 }

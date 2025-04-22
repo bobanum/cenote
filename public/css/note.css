@@ -1,0 +1,101 @@
+.note {
+	--h: 55;
+	--s: 80%;
+	--ll: 95%;
+	--l: 80%;
+	--ld: 65%;
+	--dl: 30%;
+	--d: 20%;
+	--dd: 10%;
+	--color-text: hsl(var(--h), var(--s), var(--d));
+	background-color: hsl(var(--h), var(--s), var(--l));
+
+	@media (prefers-color-scheme: dark) {
+		--ll: 10%;
+		--l: 20%;
+		--ld: 30%;
+		--dl: 65%;
+		--d: 80%;
+		--dd: 95%;
+		--s: 50%;
+	}
+
+	border-radius: 0.25em;
+	overflow: hidden;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	box-shadow: 0.1em 0.1em 0.2em #0006;
+	color: hsl(var(--h), 0%, var(--d));
+
+	>* {
+		padding: 0.15em 0.5em;
+	}
+
+	header,
+	footer {
+		line-height: 1;
+		font-family: var(--font-heading);
+	}
+
+	header {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 0.5ch;
+		font-size: smaller;
+		background-color: #0001;
+		border-bottom: 1px solid #0003;
+		padding-top: .25em;
+		padding-left: .25em;
+
+		h1 {
+			flex: 1 1 auto;
+			width: 100%;
+			font-size: 1em;
+			text-overflow: ellipsis " […]";
+			overflow: hidden;
+			white-space: nowrap;
+		}
+
+		i {
+			color: hsl(var(--h), var(--s), var(--d));
+			cursor: grab;
+		}
+	}
+
+	footer {
+		font-size: smaller;
+		border-top: 1px solid #0003;
+		display: flex;
+		color: hsl(var(--h), var(--s), var(--d));
+
+		i {
+			cursor: pointer;
+			padding: 0.25em;
+			color: hsl(var(--h), var(--s), var(--dl));
+
+			&:hover {
+				color: hsl(var(--h), var(--s), var(--dd));
+			}
+		}
+
+		label {
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			margin-right: auto;
+
+			input {
+				display: none;
+
+				&+i::before {
+					content: 'M';
+				}
+
+				&:checked+i::before {
+					content: 'N';
+				}
+			}
+		}
+	}
+
+}

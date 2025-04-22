@@ -1,7 +1,15 @@
 nav {
 	align-self: center;
+	font-family: var(--font-heading);
+	color: hsl(var(--h), var(--s), calc(var(--d)));
+	background-color: hsl(var(--h), var(--s), var(--l));
+
 	ul {
 		display: flex;
+	}
+
+	i {
+		font-size: 1.5em;
 	}
 
 	a {
@@ -13,24 +21,18 @@ nav {
 		justify-content: center;
 		gap: 0.25rem;
 		line-height: 1;
-		img {
-			width: 1.5em;
-			height: 1.5em;
-			filter: url("#currentcolor");
-			padding: 0;
-		}
+
 		&:hover {
 			background-color: hsl(var(--h), var(--s), calc(var(--d) - 10%));
 			color: #fff;
-			img {
-				filter: invert(1);
-			}
 		}
 	}
+
 	@media (width < 600px) {
 		--width: 50%;
 		align-self: center;
 		order: -1;
+
 		&::before {
 			content: "⋮";
 			cursor: pointer;
@@ -41,15 +43,19 @@ nav {
 			width: .75em;
 			text-align: center;
 		}
+
 		img {
 			display: none;
 		}
+
 		a {
 			justify-content: flex-start;
 		}
+
 		&:not(:focus-within) ul {
 			margin-left: calc(-1 * var(--width) - 1em);
 		}
+
 		ul {
 			font-size: 1.5em;
 			transition: all 250ms;

@@ -10,54 +10,122 @@
 </head>
 
 <body>
-	<header>
-		<a href="/" class="home"><img src="img/signature.svg" alt=""></a>
-		<nav class="main" role="navigation" aria-label="Main navigation" tabindex="0">
-			<ul>
-				<li>
-					<a href=""><img src="img/icons.svg#file" alt="">File</a>
-				</li>
-				<li>
-					<a href=""><img src="img/icons.svg#edit" alt="">Edit</a>
-				</li>
-				<li>
-					<a href=""><img src="img/icons.svg#view" alt="">View</a>
-				</li>
-				<li>
-					<a href=""><img src="img/icons.svg#help" alt="">Help</a>
-				</li>
-			</ul>
-		</nav>
-		<a href="" class="profile"><img src="img/icons.svg#profile" alt=""></a>
-	</header>
-	<header class="ariane">
-		<div><a href="#">Martin</a> ❯ <a href="#">Faire</a></div>
-		<div class="view">
-			<label for="search"><img src="img/icons.svg#search" alt="">
-				<input type="text" name="search" id="search" placeholder="Search...">
-			</label>
-			<label><input type="radio" name="view" id="view-list" value="view-list" checked><img src="img/icons.svg#view-list" alt=""></label>
-			<label><input type="radio" name="view" id="view-grid" value="view-grid"><img src="img/icons.svg#view-grid" alt=""></>
-		</div>
-	</header>
-	<main class="container">
-		<section class="content">
-			<h1>Welcome to the Document</h1>
-			<p>This is a sample document to demonstrate the HTML structure.</p>
-		</section>
-	</main>
-	<svg width="0" height="0">
+	<div id="interface">
+
+		<header>
+			<a href="/" class="home">
+				<object data="img/signature.svg" type="image/svg+xml" onload="this.replaceWith(this.contentDocument.activeElement)"></object>
+			</a>
+			<nav class="main" role="navigation" aria-label="Main navigation" tabindex="0">
+				<ul>
+					<li>
+						<a href=""><i>d</i><span>File</span></a>
+					</li>
+					<li>
+						<a href=""><i>B</i><span>Edit</span></a>
+					</li>
+					<li>
+						<a href=""><i>E</i><span>View</span></a>
+					</li>
+					<li>
+						<a href=""><i>D</i><span>Help</span></a>
+					</li>
+				</ul>
+			</nav>
+			<a href="" class="profile"><i>A</i></a>
+		</header>
+		<header class="ariane">
+			<div><a href="#">Martin</a> ❯ <a href="#">Faire</a></div>
+			<div class="view">
+				<label for="search">
+					<i>H</i>
+					<input type="text" name="search" id="search" placeholder="Search...">
+				</label>
+				<label><input type="radio" name="view" id="view-list" value="view-list" checked><i>K</i></label>
+				<label><input type="radio" name="view" id="view-grid" value="view-grid"><i>L</i></label>
+			</div>
+		</header>
+		<main class="container">
+			<article class="note">
+				<header>
+					<i>O</i>
+					<h1>Title</h1>
+				</header>
+				<div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+				<footer>
+					<label><input type="checkbox"><i></i></label>
+					<i>W</i>
+					<i>B</i>
+					<i>I</i>
+				</footer>
+			</article>
+
+			<article class="note">
+				<header>
+					<i>O</i>
+					<h1>Title</h1>
+				</header>
+				<div class="content">Veniam, repellendus deserunt!</div>
+				<footer>
+					<label><input type="checkbox"><i></i></label>
+					<i>W</i>
+					<i>B</i>
+					<i>I</i>
+				</footer>
+			</article>
+			<article class="note">
+				<header>
+					<i>O</i>
+					<h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse quod vero modi. Obcaecati quidem adipisci libero aliquid unde rem pariatur quaerat exercitationem, dolorem rerum dolores neque fugiat commodi aperiam excepturi!</h1>
+				</header>
+				<div class="content">Quod reiciendis voluptatibus ab consequuntur blanditiis animi tempora minus!</div>
+				<footer>
+					<label><input type="checkbox"><i></i></label>
+					<i>W</i>
+					<i>B</i>
+					<i>I</i>
+				</footer>
+			</article>
+			<article class="note">
+				<header>
+					<i>O</i>
+					<h1>Title</h1>
+				</header>
+				<div class="content">Quibusdam at repellat eligendi debitis tempora officia cum magnam aperiam!</div>
+				<footer>
+					<label><input type="checkbox"><i></i></label>
+					<i>W</i>
+					<i>B</i>
+					<i>I</i>
+				</footer>
+			</article>
+			<article class="note">
+				<header>
+					<i>O</i>
+					<h1>Title</h1>
+				</header>
+				<div class="content">Nisi fugit ipsam in consectetur impedit voluptatem dolores sapiente quibusdam explicabo adipisci.</div>
+				<footer>
+					<label><input type="checkbox"><i></i></label>
+					<i>W</i>
+					<i>B</i>
+					<i>I</i>
+				</footer>
+			</article>
+		</main>
+	</div>
+	<!-- <svg width="0" height="0">
 		<defs>
 			<filter id="currentcolor">
-				<feFlood flood-color="currentColor"/>
-				<feComposite in2="SourceAlpha" operator="in"/>
+				<feFlood flood-color="currentColor" />
+				<feComposite in2="SourceAlpha" operator="in" />
 			</filter>
 			<filter id="highlight">
-				<feFlood flood-color="yellow"/>
-				<feComposite in2="SourceAlpha" operator="in"/>
+				<feFlood flood-color="yellow" />
+				<feComposite in2="SourceAlpha" operator="in" />
 			</filter>
 		</defs>
-	</svg>
+	</svg> -->
 </body>
 
 </html>
